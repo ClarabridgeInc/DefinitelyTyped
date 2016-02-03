@@ -22,28 +22,34 @@ declare module "nock" {
 
 		export interface Scope {
 			get(path: string, data?: string): Scope;
+            get(path: RegExp, data?: string): Scope;
 
 			post(path: string, data?: string): Scope;
 			post(path: string, data?: Object): Scope;
-			post(path: string, regex?: RegExp): Scope;
+			post(path: RegExp, data?: string): Scope;
+            post(path: RegExp, data?: Object): Scope;
 
 			patch(path: string, data?: string): Scope;
 			patch(path: string, data?: Object): Scope;
-			patch(path: string, regex?: RegExp): Scope;
+			patch(path: RegExp, data?: string): Scope;
+            patch(path: RegExp, data?: Object): Scope;
 
 			put(path: string, data?: string): Scope;
 			put(path: string, data?: Object): Scope;
-			put(path: string, regex?: RegExp): Scope;
+			put(path: RegExp, data?: string): Scope;
+			put(path: RegExp, data?: Object): Scope;
 
 			head(path: string): Scope;
 
 			delete(path: string, data?: string): Scope;
 			delete(path: string, data?: Object): Scope;
-			delete(path: string, regex?: RegExp): Scope;
+			delete(path: RegExp, data?: string): Scope;
+			delete(path: RegExp, data?: Object): Scope;
 
 			merge(path: string, data?: string): Scope;
 			merge(path: string, data?: Object): Scope;
-			merge(path: string, regex?: RegExp): Scope;
+			merge(path: RegExp, data?: string): Scope;
+			merge(path: RegExp, data?: Object): Scope;
 
 			query(params: any): Scope;
 			query(acceptAnyParams: boolean): Scope;
