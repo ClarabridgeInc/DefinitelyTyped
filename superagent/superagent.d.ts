@@ -49,7 +49,7 @@ declare module "superagent" {
       search(url: string, callback?: CallbackHandler): Req;
       connect(url: string, callback?: CallbackHandler): Req;
 
-      parse(fn: Function): Req;
+      
       saveCookies(res: Response): void;
       attachCookies(req: Req): void;
     }
@@ -85,6 +85,7 @@ declare module "superagent" {
       attach(field: string, file: string, filename?: string): Req;
       auth(user: string, name: string): Req;
       buffer(val: boolean): Req;
+      parse(fn: Function): Req;
       clearTimeout(): Req;
       end(callback?: CallbackHandler): Req;
       field(name: string, val: string): Req;
