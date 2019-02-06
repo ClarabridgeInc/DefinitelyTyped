@@ -21,6 +21,7 @@ interface AsyncWorker<T> { (task: T, callback: ErrorCallback): void; }
 interface AsyncVoidFunction { (callback: ErrorCallback): void; }
 
 interface AsyncQueue<T> {
+    workersList(): T[];
     length(): number;
     started: boolean;
     running(): number;
